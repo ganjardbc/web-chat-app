@@ -15,7 +15,8 @@ import 'element-ui/lib/theme-chalk/index.css'
 import 'element-ui/lib/theme-chalk/base.css'
 import 'element-ui/lib/theme-chalk/display.css'
 
-const socketInstance = 'http://localhost:3030/'
+// const socketInstance = 'http://localhost:3030/'
+const socketInstance = 'https://websocket-chat-app-v1.herokuapp.com/'
 
 Vue.config.productionTip = false
 
