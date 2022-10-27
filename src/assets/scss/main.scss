@@ -1,0 +1,191 @@
+// import modul
+@import 'variables';
+@import 'animation';
+@import 'position';
+@import 'width';
+@import 'text';
+@import 'padding';
+@import 'margin';
+@import 'image';
+@import 'grid';
+@import 'navigator';
+@import 'form';
+@import 'card';
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Rubik');
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    outline: 0;
+    font-family: 'Open Sans', 'Rubik', $font;
+}
+
+a {
+    text-decoration: none;
+}
+
+.app {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    &.a-col {
+        @include grid_3x(70px, 350px, 1fr);
+        .a-col-1 {
+            @include column_n(1);
+            background-color: $min-color;
+        }
+        .a-col-2 {
+            @include column_n(2);
+        }
+        .a-col-3 {
+            @include column_n(3);
+            border-left: $border;
+            border-right: $border;
+        }
+    }
+
+    .app-top {
+        position: relative;
+        width: calc(100% - 30px);
+        height: 55px;
+        padding: 0 15px;
+        border-bottom: $border;
+        &.no-border {
+            border-bottom: 0px;
+        }
+        &.a-g-2x {
+            @include grid_2x(1fr, 45px);
+        }
+        .a-t-title {
+            position: relative;
+            width: 100%;
+            height: 55px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .a-t-btn {
+            @include post_top(relative);
+        }
+    }
+
+    .app-content {
+        position: relative;
+        width: calc(100% - 30px);
+        padding: 15px;
+    }
+
+    .app-bottom {
+        position: relative;
+        width: calc(100% - 30px);
+        height: 55px;
+        padding: 0 15px;
+        border-top: $border;
+    }
+
+    .app-background-chat {
+        position: relative;
+        width: calc(100% - 30px);
+        padding: 15px;
+        overflow-y: auto;
+        height: calc(100vh - 150px);
+        background-color: #f5f6fb;
+        background-position: center;
+        background-repeat: repeat;
+        background-image: url('https://i.pinimg.com/564x/05/77/0e/05770ecdcc4d802447f57e77bebd7df6.jpg');
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .app-list-object {
+        position: relative;
+        width: 100%;
+        overflow-y: auto;
+        height: calc(100vh - 55px);
+    }
+
+    .app-list-chat {
+        position: relative;
+        width: 100%;
+        overflow-y: auto;
+        height: calc(100vh - 55px);
+    }
+
+    .app-chat {
+        position: relative;
+        width: calc(100% - 30px);
+        height: 65px;
+        padding: 10px 15px;
+        border-top: $border;
+        .a-c-form {
+            position: relative;
+            @include grid_2x(1fr, 45px);
+            .txt {
+                @include column_n(1);
+            }
+            .btn {
+                @include column_n(2);
+            }
+        }
+    }
+
+    .app-search {
+        position: relative;
+        width: calc(100% - 30px);
+        padding: 15px;
+        background-color: #f9f9f9;
+        border-bottom: $border;
+        .a-s-form {
+            position: relative;
+            width: 100%;
+            height: 35px;
+            overflow: hidden;
+            background-color: #fff;
+            border: $border;
+            border-radius: 5px;
+            @include grid_2x(35px, 1fr);
+            .btn {
+                @include column_n(1);
+                padding: 0 0;
+                width: 100%;
+                height: 35px;
+                font-size: 9pt;
+                border-radius: 0;
+            }
+            .txt {
+                @include column_n(2);
+                width: calc(100% - 15px);
+                padding: 0 0;
+                height: 35px;
+            }
+        }
+    }
+
+    .app-add-person {
+        position: relative;
+        width: calc(100% - 30px);
+        padding: 15px;
+        background-color: #fff;
+        border-bottom: $border;
+    }
+
+    .app-empty-message {
+        position: relative;
+        width: 100%;
+        height: calc(100vh - 56px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .app-empty-message-container {
+            position: relative;
+            width: 100%;
+            text-align: center;
+        }
+    }
+}

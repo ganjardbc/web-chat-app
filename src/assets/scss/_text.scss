@@ -1,0 +1,192 @@
+//text
+.txt-site {
+	&.txt-font-1 {
+		font-family: $font;
+	}
+	&.txt-font-1-bold {
+		font-family: $font-bold;
+	}
+	&.txt-font-2 {
+		font-family: $font-2;
+	}
+	&.txt-font-2-bold {
+		font-family: $font-2-bold;
+	}
+	&.txt-font-3 {
+		font-family: $font-3;
+	}
+	&.txt-font-3-bold {
+		font-family: $font-3-bold;
+	}
+	&.txt-font-4 {
+		font-family: $font-4;
+	}
+	&.txt-font-4-bold {
+		font-family: $font-4-bold;
+	}
+	&.txt-extra-big {
+		font-size: 50pt;
+	}
+	&.txt-big {
+		font-size: 40pt;
+	}
+	&.txt-small {
+		font-size: 35pt;
+	}
+	&.txt-standar {
+		font-size: 22pt;
+	}
+	&.txt-title {
+		font-size: 18pt;
+	}
+	&.txt-subtitle {
+		font-size: 16pt;
+	}
+	&.txt-description {
+		font-size: 11pt;
+	}
+	&.txt-8 {
+		font-size: 8pt;
+	}
+	&.txt-9 {
+		font-size: 9pt;
+	}
+	&.txt-10 {
+		font-size: 10pt;
+	}
+	&.txt-11 {
+		font-size: 11pt;
+	}
+	&.txt-12 {
+		font-size: 12pt;
+	}
+	&.txt-13 {
+		font-size: 13pt;
+	}
+	&.txt-14 {
+		font-size: 14pt;
+	}
+	&.txt-15 {
+		font-size: 15pt;
+	}
+	&.txt-16 {
+		font-size: 16pt;
+	}
+	&.txt-17 {
+		font-size: 17pt;
+	}
+	&.txt-18 {
+		font-size: 18pt;
+	}
+	&.txt-19 {
+		font-size: 19pt;
+	}
+	&.txt-20 {
+		font-size: 20pt;
+	}
+	&.txt-init {
+		color: $min-color;
+	}
+	&.txt-underline-hover {
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	&.txt-init-hover {
+		&:hover {
+			color: $min-color;
+		}
+	}
+	a {
+		text-decoration: none;
+		&.txt-main {
+			color: $txt-84-color;
+			&:hover {
+				color: $min-color;
+			}
+		}
+	}
+	&.txt-main {
+		color: $txt-84-color;
+		a {
+			text-decoration: none;
+			color: $txt-84-color;
+			&:hover {
+				color: $min-color;
+			}
+		}
+	}
+	a {
+		text-decoration: none;
+		&.txt-primary {
+			color: $txt-54-color;
+			&:hover {
+				color: $txt-84-color;
+			}
+		}
+	}
+	&.txt-primary {
+		color: $txt-54-color;
+		a {
+			color: $txt-54-color;
+			text-decoration: none;
+			&:hover {
+				color: $txt-84-color;
+			}
+		}
+	}
+	&.txt-sekunder {
+		color: $txt-34-color;
+		a {
+			color: $txt-34-color;
+			text-decoration: none;
+			&:hover {
+				color: $txt-54-color;
+			}
+		}
+	}
+	&.txt-white {
+		color: #fff;
+	}
+	&.txt-danger {
+		color: $err-color;
+	}
+	&.txt-safe {
+		color: $pos-color;
+	}
+	&.txt-prm {
+		color: $prm-color;
+	}
+	&.txt-saf {
+		color: $saf-color;
+	}
+	&.txt-white {
+		color: #fff;
+	}
+	&.txt-extra-bold {
+		font-weight: 600;
+		font-family: $font-extra-bold;
+	}
+	&.txt-bold {
+		font-weight: 600;
+		font-family: $font-bold;
+	}
+	&.txt-thin {
+		font-weight: 500;
+		font-family: $font;
+	}
+	&.txt-center {
+		text-align: center;
+	}
+	&.txt-capital {
+		text-transform: capitalize;
+	}
+	&.txt-post-top {
+		@include post_top(absolute);
+	}
+	&.txt-overflow-ellipsis {
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+}

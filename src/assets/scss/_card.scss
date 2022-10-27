@@ -1,0 +1,252 @@
+// card chats
+.card-chat {
+    position: relative;
+    width: calc(100% - 30px);
+    padding: 15px;
+    border-bottom: $border;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    &:hover {
+        background-color: #ebebeb;
+        @include animate_1();
+        .c-c-top {
+            .c-c-name {
+                color: $txt-84-color;
+            }
+            .c-c-date {
+                color: $txt-54-color;
+            }
+        }
+    }
+    &.read {
+        .c-c-top {
+            .c-c-name {
+                color: $txt-84-color;
+            }
+            .c-c-date {
+                color: $txt-54-color;
+            }
+        }
+    }
+    &.active {
+        background-color: #ebebeb;
+        .c-c-top {
+            .c-c-name {
+                color: $txt-84-color;
+            }
+            .c-c-date {
+                color: $txt-54-color;
+            }
+        }
+        .c-c-mid {
+            .c-c-status {
+                .ttl {
+                    display: block;
+                }
+            }
+        }
+    }
+    &.unread {
+        .c-c-top {
+            .c-c-name {
+                color: $txt-84-color;
+            }
+            .c-c-date {
+                color: $min-color;
+            }
+        }
+        .c-c-mid {
+            .c-c-status {
+                .ttl {
+                    display: block;
+                }
+            }
+        }
+    }
+    .c-c-col-1 {
+        position: relative;
+        width: 65px;
+    }
+    .c-c-col-2 {
+        position: relative;
+        width: calc(100% - 65px);
+    }
+    .c-c-top {
+        position: relative;
+        width: 100%;
+    }
+    .c-c-mid {
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        .c-c-info {
+            position: relative;
+            width: calc(100% - 35px);
+        }
+        .c-c-status {
+            position: relative;
+            width: 20px;
+            padding-left: 15px;
+            .ttl {
+                position: relative;
+                border-radius: 100%;
+                width: 20px;
+                height: 20px;
+                line-height: 20px;
+                text-align: center;
+                background-color: $min-color;
+                color: #fff;
+                font-size: 9pt;
+                display: block;
+            }
+        }
+    }
+    .c-c-bot {
+        position: relative;
+        width: 100%;
+    }
+}
+
+
+.card-object {
+    position: relative;
+    width: calc(100% - 30px);
+    padding: 15px;
+    border-bottom: $border;
+    @include grid_2x(1fr, 20px);
+    @include grid_gap(15px);
+
+    &:hover {
+        @include animate_1();
+        background-color: $min-color;
+        .txt-site {
+            color: #fff;
+        }
+        .ttl {
+            display: none;
+        }
+    }
+
+    &.active {
+        background-color: $min-color;
+        .txt-site {
+            color: #fff;
+        }
+        .ttl {
+            display: none;
+        }
+    }
+
+    .ttl {
+        @include post_top(relative);
+        border-radius: 100%;
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        text-align: center;
+        background-color: $min-color;
+        color: #fff;
+        font-size: 9pt;
+    }
+}
+
+.card-message {
+    position: relative;
+    width: calc(100% - 30px);
+    margin: 30px 15px;
+    &.c-m-left {
+        @include grid_2x(45px, 1fr);
+        @include grid_gap(20px);
+        .c-m-col-1 {
+            @include column_n(1);
+        }
+        .c-m-col-2 {
+            @include column_n(2);
+        }
+        .c-m-content {
+            background-color: #fff;
+            .c-m-top {
+                .c-m-name {
+                    color: $min-color;
+                }
+                .c-m-date {
+                    color: $txt-54-color;
+                }
+            }
+        }
+    }
+    &.c-m-right {
+        .c-m-content {
+            background-color: #fff1e2;
+            .c-m-top {
+                .c-m-name {
+                    color: $txt-84-color;
+                }
+                .c-m-date {
+                    color: $txt-54-color;
+                }
+            }
+        }
+    }
+    .c-m-content {
+        position: relative;
+        width: calc(100% - 30px);
+        padding: 0 15px;
+        border-radius: 15px;
+        border: $border;
+        .c-m-top {
+            position: relative;
+            width: 100%;
+            padding: 15px 0;
+            border-bottom: $border;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            .c-m-name {
+                font-size: 11pt;
+                font-weight: 600;
+            }
+            .c-m-date {
+                font-size: 9pt;
+            }
+        }
+        .c-m-mid {
+            position: relative;
+            width: 100%;
+            padding: 15px 0 20px 0;
+            font-size: 11pt;
+        }
+    }
+}
+
+.card-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba($color: #000000, $alpha: 0.54);
+    z-index: 1000;
+    .card-popup-position {
+        @include post_center(absolute);
+    }
+    .card-popup-header {
+        position: relative;
+        width: 100%; 
+        display: flex; 
+        justify-content: space-between; 
+        align-items: center;
+        padding-bottom: 20px;
+        border-bottom: $border;
+    }
+    .card-popup-content {
+        position: relative;
+        padding-top: 10px;
+    }
+}
